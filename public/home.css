@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  #slider-container {
+    width:750px; /* Default width for larger screens */
+    margin: auto;
+    
+    margin-top: 25px;
+  }
+  
+  #slider {
+    display: flex;
+    transition: transform 0.7s ease; /* Added transition for smooth sliding */
+  }
+  
+  .slide {
+    flex: 0 0 100%; /* Each slide takes the full width of the container */
+  }
+  
+  #slider img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Hide overflow for adjacent empty slides */
+  .slide:not(:first-child) {
+    overflow: hidden;
+  }
+  
+  /* Optional: Style empty slides */
+  .slide:not(:first-child)::before {
+    content: ''; /* Empty content */
+    display: block;
+    background-color: #ddd; /* Placeholder background color */
+  }
+
+.you{
+  font-size: large;
+  font-weight: 700;
+  margin :10px 125px 10px 125px;
+  background-color: cadetblue;
+  text-align: center;
+  color: rgb(206, 238, 26);
+
+}
+  .block1{
+    font-size: large;
+    font-weight: 500;
+    margin :50px;
+    display:flex;
+    justify-content: center;
+ }
+
+ .block1 img{
+  width: 250px;
+  height: 250px;
+ }
+ figcaption{
+  font-size: small;
+  font-weight: 300;
+  text-align: center;
+ }
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+  
+  /* Responsive styles
+  @media (max-width: 750px) {
+    #slider-container {
+      width: 550px; /* Adjust width for mobile view 
+    }
+  }
+*/
+  
+
+  

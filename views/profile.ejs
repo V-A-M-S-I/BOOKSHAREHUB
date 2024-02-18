@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="contact form">
+        <h3>Donor Details</h3>
+        <form action="/submit-form" method="post">
+             <div class="formbox">
+               <div class="set">
+                 <div class="input-box">
+                     <span class="details"> Name</span>
+                     <input type="text" name="firstName"   placeholder="venkata" required>
+                   </div>
+                   <div class="input-box">
+                     <span class="details">last Name</span>
+                     <input type="text" name="lastName" placeholder="vamsi" required>
+                   </div>
+               </div>
+               <div class="set">
+                <div class="input-box">
+                    <span class="details">Pin Code</span>
+                    <input type="text" name="pincode" placeholder="522003" required>
+                </div>
+                 <div class="input-box">
+                   <span class="details">Email</span>
+                   <input type="email" name="email" placeholder="venki2007@gmail.com" pattern=".+@gmail.com"  required>
+                 </div>
+                 <div class="input-box">
+                   <span class="details">Mobile Number</span>
+                   <input type="tel" name="mobileNumber" placeholder="+91 99491 33420" pattern="[0-9]{10}" required >
+                 </div>
+               </div>
+               
+               <div class="set">
+                <div class="input-box">
+                    <span class="details">Select District:</span>
+                    <select id="district" name="district">
+                      <option value="Anantapur">Anantapur</option>
+                      <option value="Chittoor">Chittoor</option>
+                      <option value="East Godavari">East Godavari</option>
+                      <option value="Guntur">Guntur</option>
+                      <option value="Guntur">Vizag</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">LandMark</span>
+                    <input type="text" name="mark" placeholder="mark" required>
+                </div>
+               
+               </div>
+
+               <div class="input-box">
+                 <span class="details">Pickup Address</span>
+                 <textarea  cols="50" rows="3" name="message" maxlength="350" placeholder="Area and street"></textarea>
+               </div>
+
+               <div class="set">
+                <div class="input-box">
+                    <span class="details">No of Books</span>
+                    <input type="number" name="count" placeholder="5" required>
+                </div>
+                 <div class="input-box">
+                   <span class="details">class</span>
+                   <input type="number" name="class" placeholder="which class books belonged to"  required>
+                 </div>
+                 <div class="input-box">
+                   <span class="details">Approx Weight </span>
+                   <input type="number" name="Weight" placeholder="10kg" required >
+                 </div>
+               </div>
+
+               
+               
+               <div class="button">
+                 <input type="submit" value="Submit">
+               </div>
+
+             </div>
+        </form>
+   </div>
+
+  <!-- Add this script tag after your HTML content -->
+<script>
+    async function saveProfile() {
+        event.preventDefault();
+
+        const formData = {
+            name: document.getElementById('name').value,
+            district: document.getElementById('district').value,
+            city: document.getElementById('city').value,
+            address: document.getElementById('address').value,
+            phone: document.getElementById('phone').value,
+            userClass: document.getElementById('userClass').value,
+            educationLevel: document.getElementById('education-level').value,
+            institutionType: document.getElementById('institution-type').value
+        };
+
+        try {
+            const response = await fetch('/profile', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            // Handle the JSON response
+            if (result.success) {
+                location.assign('/home')
+            } else {
+                console.error('Profile save failed:', result.message);
+            }
+
+        } catch (error) {
+            console.error('Error saving profile:', error);
+        }
+    }
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,113 @@
+<%- include('./header'); -%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="home.css" rel="stylesheet"></a>
+  
+</head>
+<body>
+
+
+  <div id="slider-container">
+    <div id="slider">
+      <div class="slide"><img src="https://donateabook.org.in/wp-content/uploads/slider2/dab-home2.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="https://donateabook.org.in/wp-content/uploads/slider2/dab-how-it-works2.jpg"></div>
+      <div class="slide"><img src="https://donateabook.org.in/wp-content/uploads/slider2/dab-about-us2.jpg" alt="Slide 3"></div>
+      <div class="slide"><img src="https://donateabook.org.in/wp-content/uploads/2023/07/Homepage-banner.jpg" alt="Slide 4"></div>
+      <!-- Add more slides as needed -->
+    </div>
+  </div>
+
+  <div class="you">
+    <h3>What You Do?</h3>
+  </div>
+  <div class="block1">
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img1resize.bcbd0638.png&w=384&q=75" alt="form">
+      <figcaption>Fill The Books Donation Form</figcaption>
+    </figure>
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img2resize.a5e937c5.png&w=384&q=75" alt="pack">
+      <figcaption>Pack The Books</figcaption>
+    </figure>
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img3resize.d8173251.png&w=384&q=75" alt="print">
+      <figcaption>Take The Print Out</figcaption>
+    </figure>
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img4resize.c59b2188.png&w=384&q=75" alt="handover">
+      <figcaption>Handover The Books To Over Patner At Our Doorstep</figcaption>
+    </figure>
+  </div>
+
+  <div class="you">
+    <h3>What We Do?</h3>
+  </div>
+  <div class="block1">
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img5resize.4b44cfcc.svg&w=384&q=75" alt="form">
+      <figcaption>Collect The Books</figcaption>
+    </figure>
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img6resize.cf6f249d.png&w=384&q=75" alt="pack">
+      <figcaption>Assured books are listed on the website</figcaption>
+    </figure>
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img7resize.119a5810.png&w=384&q=75" alt="print">
+      <figcaption>Storing & maintaining the book's quality</figcaption>
+    </figure>
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img8resize.ec6dd9cf.png&w=384&q=75" alt="handover">
+      <figcaption>Shipping books to reader's doorstep</figcaption>
+    </figure>
+  </div>
+
+  <div class="you">
+    <h3>HoW Does Donation Help?</h3>
+  </div>
+  <div class="block1">
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img9resize.9cf5d861.png&w=384&q=75" alt="form">
+      <figcaption>Develop a culture of reading and sharing</figcaption>
+    </figure>
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img10resize.01b69a83.png&w=384&q=75" alt="pack">
+      <figcaption>Your old books will get a new life to give life.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img11resize.1b53ac86.png&w=384&q=75" alt="print">
+      <figcaption>Reusing books helps in reducing carbon footprints.</figcaption>
+    </figure>
+    <figure>
+      <img src="https://mypustak.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdonate_book_img12resize.65639d6d.png&w=384&q=75" alt="handover">
+      <figcaption>Be the cause of literacy & make the difference the world needs.</figcaption>
+    </figure>
+  </div>
+
+  
+
+  <script>
+    const slider = document.getElementById('slider');
+    let slideIndex = 0;
+
+    function showSlides() {
+      slideIndex++;
+      if (slideIndex >= slider.children.length) {
+        slideIndex = 0;
+      }
+      const translateValue = -slideIndex * 100 + '%';
+      slider.style.transform = 'translateX(' + translateValue + ')';
+    }
+
+    setInterval(showSlides, 5000);
+  </script>
+
+</body>
+</html>
+
+
+
+<%- include('./footer'); -%>

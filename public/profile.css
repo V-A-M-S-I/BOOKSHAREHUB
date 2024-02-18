@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    
+}
+body{
+    background:antiquewhite 
+}
+.title{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-top: 30px;
+    font-size: 2rem;
+    color: lightgoldenrodyellow;
+}
+
+
+
+
+
+.contact{
+    padding: 30px;
+    background:#fff;
+    margin: 100px;
+}
+
+.box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    gap: 20px;
+    margin-top: 0px;
+    padding: 90px;
+}
+h3{
+    color: #0e3959;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: 5px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.formbox{
+    position: relative;
+    width: 100%;
+}
+.set{
+    display: flex;
+    gap:20px;
+    
+}
+
+.input-box{
+    display: flex;
+   flex-direction: column;
+   margin-bottom: 10px;
+   width: 50%;
+}
+.details{
+    color: rgb(238, 107, 19);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.input-box input{
+    padding: 7px;
+    font-size: 1rem;
+    border: 2px solid lightseagreen ;
+    outline: none;
+}
+.input-box textarea{
+    padding: 7px;
+    font-size: 1rem;
+    border: 2px solid lightseagreen ;
+    outline: none;
+    resize: none;
+    min-height: 150px;
+    margin-bottom: 10px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+.button input{
+   font-weight: 700;
+   color: #fff;
+   background: linear-gradient(135deg, rgb(155, 89, 182), rgb(113, 183, 230));
+   padding: 10px 50px;
+   font-size: 1rem;
+   border: 2px solid lightseagreen;
+   outline: none;
+   cursor: pointer;
+}
+
+

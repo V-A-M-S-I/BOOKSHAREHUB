@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKSHAREHUB</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>get in touch with us</h2>
+        </div>
+        <div class="box">
+            <!--form box-->
+            <div class="contact form">
+                 <h3>Send a Message </h3>
+                 <form action="/submit-form" method="post">
+                      <div class="formbox">
+                        <div class="set1">
+                          <div class="input-box">
+                              <span class="details"> Name</span>
+                              <input type="text" name="firstName"   placeholder="venkata" required>
+                            </div>
+                            <div class="input-box">
+                              <span class="details">Class</span>
+                              <input type="text" name="lastName" placeholder="vamsi" required>
+                          </div>
+                        </div>
+                        <div class="set2">
+                          <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="email" name="email" placeholder="venki2007@gmail.com" pattern=".+@gmail.com"  required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Mobile Number</span>
+                            <input type="tel" name="mobileNumber" placeholder="+91 99491 33420" pattern="[0-9]{10}" required >
+                          </div>
+                        </div>
+                        
+                        <div class="input-box">
+                          <span class="details">Required Books</span>
+                          <textarea  cols="50" rows="3" name="message" maxlength="350" placeholder="write book name and how many are required...."></textarea>
+                        </div>
+                        <div class="button">
+                          <input type="submit" value="send">
+                        </div>
+
+                      </div>
+                 </form>
+            </div>
+            <!--info box-->
+            <div class="contact info">
+              <h3>Contact Info</h3>
+              <div class="infobox">
+                <div>
+                  <span><ion-icon name="location"></ion-icon>
+                  </span>
+                  <a>Veltech University, Avadi,Chennai<br>INDIA</a>
+                </div>
+                <div>
+                  <span><ion-icon name="mail"></ion-icon></span>
+                  <a href="mailto:venkatavamsi06@gmail.com">venkatavamsi0206@gmail.com</a>
+                </div>
+                <div>
+                  <span><ion-icon name="call"></ion-icon></span>
+                  <a href="tel:+91 62815 98789">+91 62815 98789</a>
+                </div>
+                
+              </div>
+              
+            </div>
+            <!--map box-->
+            <div class="contact map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124344.36772930418!2d80.01874577972107!3d13.114290429721933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5289d19bef6d25%3A0xe575e8ba16808e64!2sAvadi%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1675509068102!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        
+    </div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

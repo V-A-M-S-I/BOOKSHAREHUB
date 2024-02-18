@@ -1,0 +1,26 @@
+{
+    "3": {
+        "subjects": [
+            { "hindi": [
+                "ramayana",
+                "mahabharat"
+            ]  
+            },
+            { "English" : "gulllivers travels" }
+        ]
+    },
+    "4": {
+        "subjects": [
+            { "hindi": "300" },
+            { "hindi": "300" },
+            { "hindi": "300" },
+            { "hindi": "300" }
+        ]
+    },
+    "vamsi": {
+        "donated": [
+            "hindi",
+            "telugu"
+        ]
+    }
+}

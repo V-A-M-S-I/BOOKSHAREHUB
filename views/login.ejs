@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="/login.css" rel="stylesheet">
+</head>
+<body>
+    <div class="box">
+        <div class="inner">
+            <form action="/login"  >
+                
+                <div class='logo'>
+                    <img src='https://img.freepik.com/premium-vector/book-donation-cardboard-box-full-different-textbooks_189033-1812.jpg'alt="books"></img>
+                </div>
+                
+                <div class="username">
+                    <input type="email" placeholder="E-mail address" name="email"  id="ramesh" ></input>
+                    <div class="email error"></div>
+                </div>
+                <div class="psw">
+                    <input type="password" placeholder="Password" name="password" id="devi"  ></input>
+                    <div class="password error"></div>
+                </div>
+                <div class="sign">
+                    <input type="submit" class='login' value="Sign In" ></input>
+                </div>
+                <a href='/forgot' class='forgot'>Forgot Password?</a>
+                <a href='/signup' class='register'>Sign Up</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const emailError = document.querySelector('.email.error');
+        const passwordError = document.querySelector('.password.error');
+
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    emailError.textContent = '';
+    passwordError.textContent = '';
+
+    const email = form.elements['ramesh'].value;
+    const password = form.elements['devi'].value;
+
+    try {
+        const res = await fetch('/login', {
+            method: 'POST',
+            body: JSON.stringify({ email, password }),
+            headers: { 'Content-Type': 'application/json' }
+        });
+
+        const data = await res.json();
+        console.log(res);
+        console.log(data);
+
+        if (data.errors) {
+            emailError.textContent = data.errors.email;
+            passwordError.textContent = data.errors.password;
+        }
+
+        if (data.user) {
+            location.assign('/home');
+        }
+    } catch (err) {
+        console.log(err);
+    }
+});
+
+
+    </script>
+</body>
+</html>

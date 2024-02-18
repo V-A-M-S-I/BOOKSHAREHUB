@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="/signup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="box1">
+        <div class="inner1">
+            <form action="/signup">
+                <div class='logo1'>
+                    <img src='https://img.freepik.com/premium-vector/book-donation-cardboard-box-full-different-textbooks_189033-1812.jpg' alt="boos"></img>
+                </div>
+                
+                <div class="username1">
+                    <input type="text" placeholder="Username" name="name" id="vamsi"  ></input>
+                    <span id="names"></span>
+                </div>
+                <div class="mail">
+                    <input type="email" placeholder="E-mail address" name="email"  id="ramesh" ></input>
+                    <div class="email error" id="err"></div>
+                </div>
+                <div class="psw1">
+                    <input type="password" placeholder="Password" name="password" id="devi"  ></input>
+                    <div class="password error" id="perr"></div>
+                </div>
+                <div class="psw1">
+                    <input type="password" placeholder="Re-EnterPassword" name="reEnterPassword"  id="harika"></input>
+                    <span id="repsw"></span>
+                </div>
+                <div class="sign1">
+                    <input type="submit" class='login1' value="Sign Up"></input>
+                </div>
+            
+                <div class='hav'>
+                    Have an account?<a href='/login' class='forgot'>Sign In</a>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        const emailError = document.querySelector('.email.error');
+        const passwordError = document.querySelector('.password.error')
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            emailError.textContent = '';
+            passwordError.textContent = '';
+
+            const name = document.getElementById('vamsi').value;
+            const email = document.getElementById('ramesh').value;
+            const password = document.getElementById('devi').value;
+
+            try {
+                const res = await fetch('/signup', {
+                    method: 'POST',
+                    body: JSON.stringify({ name, email, password }),
+                    headers: { 'Content-Type': 'application/json' }
+                });
+
+                const data = await res.json();
+                console.log(data);
+
+                if (data.errors) {
+                    emailError.textContent = data.errors.email;
+                    passwordError.textContent = data.errors.password;
+                } else if (data.user) {
+                    // Redirect to the login page
+                    location.assign('/home');
+                }
+            } catch (err) {
+                console.log(err);
+            }
+
+        });
+    </script>
+</body>
+</html>

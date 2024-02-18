@@ -1,0 +1,77 @@
+.outlock{
+    background-color:rgba(214, 201, 20, 0.678);
+    text-decoration: none;
+    padding: 15px;
+    height: 100vh;
+    width: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-image: url(https://woodlibrary.librarycalendar.com/sites/default/files/2022-04/istockphoto-1302961248-612x612_0.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+ul{
+    display: flex;
+    gap: 85rem;
+}
+
+li{
+    list-style: none;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    font-weight: 700; 
+}
+
+.vam{
+    font-size: 30px;
+    font-weight: 700; 
+    color: rgb(55, 151, 87);
+}
+li a{
+    list-style: none;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    
+}
+
+h2{
+    font-size: 42px;
+    color: rgb(209, 27, 73);
+    margin-top: 100px;
+    
+}
+h4{
+    font-size: 25px;
+    color:  rgb(155, 61, 231);
+    
+}
+
+.vamsi{
+    padding: 13px;
+    background-color: rgba(15, 224, 224, 0.959);
+    border-radius: 5px;
+    color:white;
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 75px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 3px 5px rgb(5, 5, 0);
+    text-decoration: none;
+}
+
+.book{
+    text-align: center;
+    float: inline-end;
+}
+
+
+
+
+
+   
+
+
